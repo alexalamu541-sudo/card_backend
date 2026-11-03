@@ -11,7 +11,7 @@ const app = express();
 app.disable('x-powered-by');
 app.use(helmet());
 
-const allowedOrigins = (process.env.CORS_ORIGINS || 'http://localhost:5173')
+const allowedOrigins = (process.env.CORS_ORIGINS || 'https://class-three-green.vercel.app/')
   .split(',').map(x => x.trim()).filter(Boolean);
 app.use(cors({
   origin(origin, callback) {
